@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ground Team Red • Official Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="faviGTR.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+    body, html {
+      height: 0%;
+      margin: 0;
+    }
+
+    body {
+      /* Letakkan nama fail gambar anda di sini */
+      background-image: url('pictures/backgroundAA.png');
+
+      /* Untuk pastikan gambar penuh satu skrin */
+      background-size: cover;
+
+      /* Untuk letakkan gambar di tengah */
+      background-position: center;
+
+      /* Untuk elak gambar berulang-ulang */
+      background-repeat: no-repeat;
+
+      /* (Pilihan) Untuk buat gambar statik bila skrol */
+      background-attachment: fixed; 
+    }
+
+    .main-navigation {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    }
+
+    .dropdown {
+  position: relative;
+  display: inline-block;
+    }
+
+    .dropdown a {
+  text-decoration: none;
+  color: rgb(0, 0, 0); /* tukar ikut tema */
+  padding: 8px 12px;
+    }
+
+    .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #ffffff;
+  min-width: 180px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  z-index: 999;
+  border-radius: 6px;
+    } 
+
+    .dropdown-content a {
+  color: black;
+  padding: 10px 16px;
+  text-decoration: none;
+  display: block;
+    }
+
+    .dropdown-content a:hover {
+  background-color: #f1f1f1;
+    }
+
+    .dropdown:hover .dropdown-content {
+  display: block;
+    }
+
+</style>
+</head>
+<body>
+
+    <header class="new-header">
+        <div class="nav-container">
+            <div class="nav-left">
+                <a href="index.html" class="header-logo"><img src="logoGTR.png" alt="GTR Logo"></a>
+                <nav class="main-navigation">
+
+            <div class="dropdown">
+                <a href="#">Memo <i class="fas fa-chevron-down"></i></a>
+                <div class="dropdown-content">
+                <a href="#memo-full-page">Memo Terkini</a>
+                <a href="FormTicket/elibrary.html">E-Library</a>
+            </div>
+        </div>
+
+            <div class="dropdown">
+                <a href="#manuals">Manuals <i class="fas fa-chevron-down"></i></a>
+                <div class="dropdown-content">
+                <a href="#ramp-forms">Ramp Forms</a>
+                <a href="#e-rim">E-Rim</a>
+                <a href="#pitstop">Pitstop</a>
+                <a href="#airport-pass">Airport Pass</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+                <a href="#">About Us <i class="fas fa-chevron-down"></i></a>
+                <div class="dropdown-content">
+                <a href="#ramp-service">Ramp Service</a>
+                <a href="#highlights">Highlights</a>
+            </div>
+        </div>
+                </nav>
+        </div>
+            <div class="nav-right">
+                <div class="search-bar">
+                <i class="fas fa-search"></i>
+                <input type="text" id="searchInput" placeholder="Search...">
+            </div>
+
+            <!-- Dalam main.html -->
+            <button onclick="logout()">Logout</button>
+
+            <script>
+            function logout() {
+            localStorage.removeItem("userLoggedIn");
+            window.location.href = "index.html";
+            }
+            </script>
+
+                <button id="hamburger-btn" class="hamburger-btn" aria-label="Toggle Menu">
+                    <span class="line"></span><span class="line"></span><span class="line"></span>
+                </button>
+            </div>
+        </div>
+        <nav id="mobile-menu" class="mobile-nav">
+             <a href="#memo-full-page">Memo</a>
+             <a href="#manuals">Manuals</a>
+             <a href="#ramp-forms">Ramp Forms</a>
+             <a href="#ramp-service">About Us</a>
+             <a href="#e-rim">E-Rim</a>
+             <a href="#pitstop">Pitstop</a>
+             <a href="#airport-pass">Airport Pass</a>
+             <a href="#highlights">Highlights</a>
+        </nav>
+    </header>
+
+    <main class="dashboard-main">
+        <section id="memo-full-page" class="dashboard-section">
+            <div class="section-header-content">
+                <i class="fas fa-archive section-icon"></i>
+                <h2>Memo Archive</h2>
+                <p class="section-subheading">All Past Memos & Announcements</p>
+                <a href="main.html" class="btn-view-all">← Back to Home</a>
+            </div>
+            
+            <div class="memo-container">
+                <div class="memo-item"><h4><span class="memo-date">16 Jul 2025</span> | Kemas Kini Sistem</h4><p>Sistem akan melalui proses penyelenggaraan pada jam 11 malam ini dan dijangka selesai dalam 2 jam. Sebarang kesulitan amat dikesali. Harap maklum.</p></div>
+                <div class="memo-item"><h4><span class="memo-date">15 Jul 2025</span> | Laporan Prestasi Bulanan</h4><p>Laporan prestasi untuk bulan Jun kini boleh diakses melalui dashboard Looker Studio di bawah. Sila rujuk dashboard masing-masing.</p></div>
+                <div class="memo-item"><h4><span class="memo-date">12 Jul 2025</span> | Prosedur Keselamatan Baru</h4><p>Mulai 15 Julai 2025, semua kakitangan dikehendaki mematuhi prosedur keselamatan baru yang telah diedarkan melalui emel.</p></div>
+                <div class="memo-item"><h4><span class="memo-date">10 Jul 2025</span> | Selamat Datang ke Portal Baru</h4><p>Selamat datang ke portal dashboard GTR yang baru! Portal ini direka untuk memudahkan akses kepada data dan maklumat terkini.</p></div>
+            </div>
+        </section>
+
+        <section id="manuals" class="dashboard-section">
+            <div class="manuals-header">
+            <h2>MANUALS</h2>
+            </div>
+            <div class="manuals-grid">
+                <a href="https://drive.google.com/drive/folders/1ocx6Ne_zEnxzxt5pJYJDgo6vkRiA8siK" class="manual-item">
+                <i class="fas fa-file-alt"></i>
+                <span>ICAO MANUAL</span>
+                </a>
+                <a href="https://drive.google.com/drive/folders/18-bpvv3ufOyslXUROwPYZU2CIjXu3rj4" class="manual-item">
+                <i class="fas fa-file-alt"></i>
+                <span>IATA MANUAL</span>
+                </a>
+                <a href="https://drive.google.com/drive/folders/19ANepaKCSt2_XmCqnYcUg445YDhMAFIz" class="manual-item">
+                <i class="fas fa-file-alt"></i>
+                <span>GTR MANUAL</span>
+                </a>
+                <a href="https://drive.google.com/drive/folders/1VFXZI56EMh03gMyjZfp5AP7PEXHydhj8" class="manual-item">
+                <i class="fas fa-file-alt"></i>
+                <span>OTHER MANUAL</span>
+                </a>
+                <a href="https://drive.google.com/file/d/1i0ntr1jxCTa0NQrOrgcuwFfVQJ5yQ4jn/view" class="manual-item">
+                <i class="fas fa-file-alt"></i>
+                <span>SAFETY POLICY</span>
+                </a>
+                <a href="https://sites.google.com/airasia.com/reddocs/home?authuser=0" class="manual-item">
+                <i class="fas fa-file-alt"></i>
+                <span>RED DOCS</span>
+                </a>
+            </div>
+        </section>
+
+        <section id="ramp-forms" class="dashboard-section">
+    <div class="forms-container">
+        <div class="forms-list">
+            <h2>RAMP FORMS</h2>
+            <ul>
+                <li>Ramp Overtime Form</li>
+                <li>Airport Driving Permit</li>
+                <li>Daily Safety Briefing</li>
+                <li>Covid-19 Form</li>
+                <li>Coruson</li>
+            </ul>
+        </div>
+
+        <div class="forms-grid">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfmdhNSban0MFUP3tZBDCXdktNREpFT4gqP0AS0T05U0WKIcg/viewform" class="form-item">
+                <h3>e-Overtime</h3>
+                <div class="form-icon"></div>
+            </a>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLScNLFYVWsQYBXQWJUq1beV3kJiNv3dvd4T_hmsDm4zZLeKoBw/viewform" class="form-item">
+                <h3>e-ADP</h3>
+                <div class="form-icon"></div>
+            </a>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdFgrGW-i6AV6qkyPsD7RgLlFDISudYUDBF6r7uuNssY5P4SA/viewform" class="form-item">
+                <h3>e-Briefing</h3>
+                <div class="form-icon"></div>
+            </a>
+            <a href="https://gaelidentityserver.gaelenlighten.com/core/login?signin=12dec80f7105695d9c19309eda45b84e#!/home" class="form-item">
+                <h3>Coruson</h3>
+                <div class="form-icon"></div>
+            </a>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfr4WpbjDI9ILoH3GjYLtGvYt88oowzM7-cboVXmZawaXv1UA/closedform" class="form-item">
+                <h3>Covid-19 Form</h3>
+                <div class="form-icon"></div>
+            </a>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfH9UXHIO43AX39dGnfUMiRxTGSmUGegbubjgM2fuJ9Un7cpQ/viewform" class="form-item">
+                <h3>e-Delay Report</h3>
+                <div class="form-icon"></div>
+            </a>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfucsAVGNooIDnWQS-wWM9JQVpP7tKLI9UWhxdtL9sYBPAxJA/viewform" class="form-item">
+                <h3>e-RECONCILE</h3>
+                <div class="form-icon"></div>
+            </a>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdFgrGW-i6AV6qkyPsD7RgLlFDISudYUDBF6r7uuNssY5P4SA/viewform" class="form-item">
+                <h3>e-LDM</h3>
+                <div class="form-icon"></div>
+            </a>
+             <a href="https://docs.google.com/forms/d/e/1FAIpQLSe5Ko9-tV85ewJnNYO6cPgcvQwBBlJfMgibbqZXrQlFgJWcYg/viewform" class="form-item">
+                <h3>e-OFLD (C)</h3>
+                <div class="form-icon"></div>
+            </a>
+             <a href="https://docs.google.com/forms/d/e/1FAIpQLScsti4E-Z0hdJh9ji-tGDM7yopsuUiLoNlU-qWAHs1MmhfH6Q/viewform" class="form-item">
+                <h3>e-EDR</h3>
+                <div class="form-icon"></div>
+            </a>
+        </div>
+    </div>
+
+    <div class="button-wrapper">
+        <a href="https://lookerstudio.google.com/reporting/421222e8-f321-4578-873e-335229cc5feb/page/p_wwo0y7xbid?s=oCcpg92gfkY" class="btn-primary">
+            <span>RAMP OVERTIME VIEW</span>
+        </a>
+    </div>
+</section>
+
+        <section id="ramp-service" class="dashboard-section">
+    <h2 class="section-title">RAMP SERVICE</h2>
+    <ul class="service-list">
+        <li>To perform all ramp activities in operational areas for arrival, transit activities, and departure of all aircraft within the specified turn-around time during assigned tour of duty period.</li>
+        <li>Perform loading and unloading of baggage and cargo activities at baggage sorting areas, aircraft handling bay and arrival hall as per company and customer airline requirements.</li>
+        <li>Operate ground service equipment for ground handling activities.</li>
+        <li>Perform aircraft servicing functions during aircraft transit and night stop.</li>
+        <li>Perform aircraft towing, pushback and headset functions for aircraft movement. Ensure the bay is cleared of FOD before and after aircraft movement.</li>
+        <li>Ensure all ground service equipment are serviceable before usage. Adhere to all SOP & safety operation procedure.</li>
+        <li>Perform any other activities related to Ground Handling as required by the Company.</li>
+    </ul>
+</section>
+
+        <section id="e-rim" class="dashboard-section">
+    <div class="section-header-content">
+        <h2>e-RIM (RAMP Internal Memo)</h2>
+    </div>
+    <div class="e-rim-container">
+        <div class="e-rim-sheet">
+            <iframe src="https://docs.google.com/spreadsheets/d/1WX8KfHsIZUGDHC7H352WvffIBXts2T45eb1KLVa0gcA/edit?gid=0#gid=0"></iframe>
+        </div>
+        <div class="e-rim-new-items">
+            <a href="https://drive.google.com/drive/folders/1l22oASMJRm08gpcUVA2gTgN91XbutEPJ" class="form-item new-item">
+                <div class="new-badge">New!</div>
+                <h3>e-RIM (82)</h3>
+                <div class="form-icon"></div>
+            </a>
+            <a href="#" class="form-item new-item">
+                <div class="new-badge">New!</div>
+                <h3>e-RIM (83)</h3>
+                <div class="form-icon"></div>
+            </a>
+        </div>
+    </div>
+</section>
+
+<section id="quick-links" class="dashboard-section flush">
+    <div class="quick-links-container">
+        <a href="https://drive.google.com/file/d/14jzG86rW3chDn2r-xIqO4jGVmStMol81/view" class="btn-quick-link">GTR Employee Handbook</a>
+        <a href="https://sites.google.com/groundteamred.com/hrportal/" class="btn-quick-link">HR Portal</a>
+        <a href="https://sites.google.com/airasia.com/the-allstar-playbook/redicons" class="btn-quick-link">Redcons</a>
+    </div>
+</section>
+
+<section id="pitstop" class="dashboard-section">
+    <div class="info-card">
+        <div class="info-header">
+            <h3>PITSTOP (CLOCK IN & OUT)</h3>
+        </div>
+        <div class="info-body">
+            <div class="qr-container">
+                <img src="pictures/qrpitstop.png" alt="QR Code for Pitstop Clock In/Out">
+                </div>
+            <div class="instructions">
+                <h4>Instructions & Information</h4>
+                <ul>
+                    <li>Use this for Ramp Pitstop clock in & out.</li>
+                    <li>Please fill all information.</li>
+                    <li>Thank you for your cooperation.</li>
+                </ul>
+            </div>
+            <div class="button-wrapper">
+            <a href="https://scheduling.groundteamred.com/pitstop/#/" class="btn-primary">
+            <span>Go to Pitstop Form</span>
+            </a>
+        </div>
+        </div>
+    </div>
+</section>
+
+<section id="airport-pass" class="dashboard-section">
+     <div class="info-card">
+        <div class="info-header">
+            <h3>AIRPORT PASS</h3>
+        </div>
+        <div class="info-body">
+            <div class="qr-container">
+                <img src="pictures/qrairportpass.png" alt="QR Code for Airport Pass">
+                 </div>
+            <div class="instructions">
+                <h4>Instructions & Information</h4>
+                <ul>
+                    <li>Use this e-form for new, renewal, change area and lost applications.</li>
+                    <li>Please fill all information with block letters only.</li>
+                    <li>You are advised to fill this e-form one month earlier from expiry month.</li>
+                    <li>Please choose NA for expiry month and year if you are requesting for new application.</li>
+                    <li>To avoid confusion, you are advised to fill in the e-form once only. Please direct your questions to us via email (email_anda@groundteamred.com) OR meet us directly at RAMP office (G211/63).</li>
+                    <li>All of your confidential information which are recorded are for internal use only.</li>
+                    <li>Thank you for your cooperation.</li>
+                </ul>
+            </div>
+            <div class="button-wrapper">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSehRhey4c0sfZsltMKcayfahVjlIu9nb5OYpCMTjnvovBqRLA/viewform" class="btn-primary">
+            <span>Go to Airport Pass Form</span>
+            </a>
+        </div>
+        </div>
+    </div>
+    </section>
+
+        <section id="highlights" class="dashboard-section flush">
+    <div class="manuals-header">
+        <h2>RAMP Highlights</h2>
+    </div>
+
+    <div class="highlight-slider-container">
+        <div class="highlight-slider-grid">
+            
+            <div class="highlight-slide">
+                <div class="highlight-item large-image">
+                    <img src="highlights/highlight1.jpg" alt="Highlight 1">
+                </div>
+                <div class="highlight-item small-image-1">
+                    <img src="highlights/highlight2.jpg" alt="Highlight 2">
+                </div>
+                <div class="highlight-item small-image-2">
+                    <img src="highlights/highlight3.jpg" alt="Highlight 3">
+                </div>
+            </div>
+
+            <div class="highlight-slide">
+                <div class="highlight-item large-image">
+                    <img src="highlights/highlight4.jpg" alt="Highlight 4">
+                </div>
+                <div class="highlight-item small-image-1">
+                    <img src="highlights/highlight5.jpg" alt="Highlight 5">
+                </div>
+                <div class="highlight-item small-image-2">
+                    <img src="highlights/highlight6.jpg" alt="Highlight 6">
+                </div>
+            </div>
+            
+            </div>
+        <div class="slider-controls-highlights">
+            <button class="slide-btn-h prev-slide-h" aria-label="Previous Highlight">&#10094;</button>
+            <div class="slider-dots-container-h"></div>
+            <button class="slide-btn-h next-slide-h" aria-label="Next Highlight">&#10095;</button>
+        </div>
+    </div>
+    <div class="highlight-caption">
+        <p>With all these celebrations going on, a friendly reminder from your RAMP team to always be mindful of your SOPs and do have a good day ahead!</p>
+    </div>
+    </section>
+
+    </main>
+
+    <footer class="main-footer">
+        <p>© <span id="current-year"></span> Ramp Data GTR. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Skrip ringkas untuk tetapkan tahun pada footer halaman ini
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

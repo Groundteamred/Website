@@ -1,0 +1,60 @@
+<!-- ✅ Popup untuk memo/update -->
+        <div id="memoPopup" style="
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #007bff;
+        color: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        max-width: 350px;
+        font-size: 15px;
+        z-index: 9999;
+        opacity: 0;
+        transition: opacity 0.5s ease;
+        ">
+        <strong>📢 Memo Terbaru</strong><br><br>
+        <div id="memoContent">Loading memo...</div>
+            <br>
+        <button onclick="closeMemo()" style="
+        background: white; color: #007bff; border: none;
+        padding: 6px 12px; border-radius: 5px; cursor: pointer;
+        ">Tutup</button>
+        </div>
+
+        <script>
+        // ✅ Tukar nilai ni bila ada memo/update baru
+        const CURRENT_MEMO_ID = "memo-2025-08-07";
+        const MEMO_TEXT = `
+        ✅ Update 7 Ogos 2025<br>
+        - GTR Dashboard ada pembaikan paparan!<br>
+        - Fungsi baru login notification ditambah.<br>
+        - Sila semak laporan mingguan anda sebelum Jumaat.<br>
+        `;
+
+        // ✅ Paparkan memo jika belum dibaca
+        window.addEventListener("DOMContentLoaded", function () {
+        const hasSeen = localStorage.getItem("seenMemo");
+
+        if (hasSeen !== CURRENT_MEMO_ID) {
+        document.getElementById("memoContent").innerHTML = MEMO_TEXT;
+        const popup = document.getElementById("memoPopup");
+        popup.style.display = "block";
+        setTimeout(() => {
+        popup.style.opacity = 1;
+        }, 100);
+        }
+        });
+
+        // ✅ Tutup memo dan simpan sebagai sudah dibaca
+        function closeMemo() {
+        const popup = document.getElementById("memoPopup");
+        popup.style.opacity = 0;
+        setTimeout(() => {
+        popup.style.display = "none";
+        }, 500);
+        localStorage.setItem("seenMemo", CURRENT_MEMO_ID);
+        }
+        </script>

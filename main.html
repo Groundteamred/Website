@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ground Team Red • Official site</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="faviGTR.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+    body, html {
+      height: 0%;
+      margin: 0;
+    }
+
+    .header {
+        position: relative;
+        z-index: 1000;
+        background-color: white; /* atau warna solid yang sesuai */
+    }
+
+    .banner {
+        position: relative;
+        z-index: 1;
+        }
+
+    body {
+      /* Letakkan nama fail gambar anda di sini */
+      background-image: url('pictures/backgroundAA.png');
+
+      /* Untuk pastikan gambar penuh satu skrin */
+      background-size: cover;
+
+      /* Untuk letakkan gambar di tengah */
+      background-position: center;
+
+      /* Untuk elak gambar berulang-ulang */
+      background-repeat: no-repeat;
+
+      /* (Pilihan) Untuk buat gambar statik bila skrol */
+      background-attachment: fixed; 
+    }
+    
+    .main-navigation {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    }
+
+    .dropdown {
+  position: relative;
+  display: inline-block;
+    }
+
+    .dropdown a {
+  text-decoration: none;
+  color: rgb(0, 0, 0); /* tukar ikut tema */
+  padding: 8px 12px;
+    }
+
+    .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #ffffff;
+  min-width: 180px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  z-index: 999;
+  border-radius: 6px;
+    } 
+
+    .dropdown-content a {
+  color: black;
+  padding: 10px 16px;
+  text-decoration: none;
+  display: block;
+    }
+
+    .dropdown-content a:hover {
+  background-color: #f1f1f1;
+    }
+
+    .dropdown:hover .dropdown-content {
+  display: block;
+    }
+
+
+</style>
+</head>
+<body>
+    <header class="new-header">
+    <div class="nav-container">
+        <div class="nav-left">
+            <a href="index.html" class="header-logo"><img src="logoGTR.png" alt="GTR Logo"></a>
+            <nav class="main-navigation">
+
+    <div class="dropdown">
+        <a href="#">Memo <i class="fas fa-chevron-down"></i></a>
+        <div class="dropdown-content">
+            <a href="#memo">Memo Terkini</a>
+            <a href="FormTicket/elibrary.html">E-Library</a>
+            <a href="FormTicket/formticket.html">Ticket Repairing</a>
+        </div>
+    </div>
+
+    <div class="dropdown">
+        <a href="#ramp.html">Ramp <i class="fas fa-chevron-down"></i></a>
+        <div class="dropdown-content">
+            <a href="KLIA2Ops">KLIA 2 Ops </a>
+            <a href="FOCA OPS">FOCA OPS </a>
+            <a href="GSE">GSE </a>
+            <a href="BH">Baggage Handling(BH) </a>
+            <a href="LC">Load Control(LC) </a>
+            <a href="Training">Training </a>
+            <a href="AIC">AIC </a>
+            <a href="RampStore">Ramp Store </a>
+        </div>
+    </div>
+
+    <div class="dropdown">
+        <a href="#">Looker Studio <i class="fas fa-chevron-down"></i></a>
+        <div class="dropdown-content">
+            <a href="#looker-studio-section">Dashboard Harian</a>
+            <a href="Operations.html">Aviation Operations Dashboard</a>
+        </div>
+    </div>
+
+    <div class="dropdown">
+        <a href="#">Tableau <i class="fas fa-chevron-down"></i></a>
+        <div class="dropdown-content">
+            <a href="#tableau-section">Overview</a>
+            <a href="#">TEST</a>
+        </div>
+    </div>
+
+    <div class="dropdown">
+        <a href="#">Video <i class="fas fa-chevron-down"></i></a>
+        <div class="dropdown-content">
+            <a href="#video-tutorial">Tutorial </a>
+            <a href="#">Youtube</a>
+            <a href="#">Tiktok</a>
+        </div>
+    </div>
+
+    <div class="dropdown">
+        <a href="#partner-section">Flight Partners <i class="fas fa-chevron-down"></i></a>
+        <div class="dropdown-content">
+            <a href="#test1">test1</a>
+            <a href="#test2">test2</a>
+        </div>
+    </div>
+
+        </nav>
+
+                <!-- a href="#index.html">Logout <i class="fas fa-chevron-down"></i></a> -->
+
+            </nav>
+        </div>
+        <div class="nav-right">
+            <div class="search-bar">
+            <i class="fas fa-search"></i>
+            <input type="text" id="searchInput" placeholder="Search...">
+
+        </div>
+
+        
+                <!-- Dalam main.html -->
+            <button onclick="logout()">Logout</button>
+
+            <script>
+            function logout() {
+            localStorage.removeItem("userLoggedIn");
+            window.location.href = "index.html";
+            }
+            </script>
+
+            <button id="hamburger-btn" class="hamburger-btn" aria-label="Toggle Menu">
+                <span class="line"></span><span class="line"></span><span class="line"></span>
+            </button>
+        </div>
+    </div>
+    <!-- Mobile menu -->
+    <nav class="mobile-nav" id="mobile-menu">
+        <a href="#memo">Memo</a>
+        <a href="#looker-studio-section">Looker Studio</a>
+        <a href="#tableau-section">Tableau</a>
+        <a href="#video-tutorial">Video</a>
+        <a href="#data-insights">Live Data</a>
+    </nav>
+</header>
+
+
+
+<div class="welcome-banner-container">
+        <img src="pictures/welcomeAA.jpg" alt="Welcome to our new home!">
+    </div>
+
+    <div class="main-content-wrapper">
+        <main class="feed-column">
+            <div class="hero-slider-container">
+                <div class="hero-slider-grid">
+                    <div class="hero-slide"><img src="pictures/GH2.jpg" alt="Ground Handling"></div>
+                    <div class="hero-slide"><img src="pictures/Marshalling.jpg" alt="Marshalling"></div>
+                    <div class="hero-slide"><img src="pictures/Trolley1.jpeg" alt="Trolley"></div>
+                </div>
+                <div class="hero-slider-dots"></div>
+            </div>
+
+            <article class="feed-post">
+                <div class="post-header">
+                    <img src="circleGTR.png" alt="Profile Picture" class="post-avatar">
+                    <div class="post-author">
+                        <strong>GTR</strong> posted an update.
+                        <span>Now!</span>
+                    </div>
+                    <div class="post-options"><i class="fas fa-thumbtack"></i> Pinned</div>
+                </div>
+                <div class="post-body">
+                    <h3>Welcome To Ground Team Red Website</h3>
+                    <p>Welcome, Allstars! We are thrilled to launch our new digital home. Simplify, Modern, and stay updated with everything on GTR.</p>
+                </div>
+            </article>
+        </main>
+
+        <aside class="sidebar-column">
+            <div class="widget">
+                <img src="pictures/backgroundAA.png" alt="Allstar Playbook" class="widget-image">
+                <div class="widget-content">
+                    <p class="widget-subtitle">FEATURED PAGE</p>
+                    <h3>Workvivo User Guide</h3>
+                    <a href="#" class="widget-button">Pages</a>
+                </div>
+            </div>
+            <div class="widget">
+                <div class="widget-content">
+                    <p class="widget-subtitle">UPCOMING EVENTS</p>
+                    <ul class="event-list">
+                        <li>
+                            <div class="event-date"><span>JUL</span>15</div>
+                            <div class="event-details"><h4>Change To Workvivo</h4><p>GTR, AirAsia</p></div>
+                        </li>
+                        <li>
+                            <div class="event-date"><span>JUL</span>24</div>
+                            <div class="event-details"><h4>Teh Tarik Talks: Baking</h4><p>Social Club</p></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </aside>
+    </div>
+    
+    
+    <main class="dashboard-main">
+        <section id="memo" class="dashboard-section">
+            <div class="section-header-content">
+                <i class="fas fa-bell section-icon"></i>
+                <h2>Memo GTR</h2>
+                <p class="section-subheading">Any Update At GTR On This Platform</p>
+                <a href="memo.html" class="btn-view-all">View All Memos</a>
+            </div>
+            <div class="memo-container">
+                <div class="memo-item">
+                    <h4><span class="memo-date">22 Jul 2025</span> | Kemas Kini Sistem</h4>
+                    <p>Sistem akan melalui proses penyelenggaraan pada jam 11 malam ini. Harap maklum.</p>
+                </div>
+                <div class="memo-item">
+                    <h4><span class="memo-date">22 Jul 2025</span> | Laporan Prestasi Bulanan</h4>
+                    <p>Laporan prestasi untuk bulan Julai kini boleh diakses.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="looker-studio-section" class="dashboard-section">
+            <div class="section-header-content">
+                <i class="fas fa-chart-line section-icon"></i>
+                <p class="section-subheading">Live Dashboard Collection</p>
+                <h2>Looker Studio Dashboards</h2>
+            </div>
+            <div class="slider-container"> 
+                <div class="slider-grid">
+                    <div class="project-card"><img src="lookerstudio/performance1.png" alt="Ramp Performance Dashboard"><div class="card-content"><h3>Ramp Performance</h3><div class="button-group"><a href="#" class="btn-project-details open-image-modal" data-image="lookerstudio/performance1.png">Details</a><a href="https://lookerstudio.google.com/reporting/1Glc4purfK_bXNr4XWFwh1yvwnx1pM_VN" class="btn-project-details live-link" target="_blank" rel="noopener noreferrer">View Live</a></div></div></div>
+                    <div class="project-card"><img src="lookerstudio/performance2.png" alt="Final Ramp Performance"><div class="card-content"><h3>Final Ramp Performance</h3><div class="button-group"><a href="#" class="btn-project-details open-image-modal" data-image="lookerstudio/performance2.png">Details</a><a href="https://lookerstudio.google.com/reporting/8dbbc9c4-71cf-4cd3-9455-d10738f39d72" class="btn-project-details live-link" target="_blank" rel="noopener noreferrer">View Live</a></div></div></div>
+                    <div class="project-card"><img src="lookerstudio/performance3.png" alt="Morning Wave"><div class="card-content"><h3>Morning Wave</h3><div class="button-group"><a href="#" class="btn-project-details open-image-modal" data-image="lookerstudio/performance3.png">Details</a><a href="https://lookerstudio.google.com/reporting/2aac344a-6676-48a3-9c0e-685907a93f4b" class="btn-project-details live-link" target="_blank" rel="noopener noreferrer">View Live</a></div></div></div>
+                </div>
+                <button class="slide-btn prev-slide" aria-label="Previous Slide">❮</button>
+                <button class="slide-btn next-slide" aria-label="Next Slide">❯</button>
+                <div class="slider-dots-container"></div>
+            </div>
+        </section>
+        
+        <section id="tableau-section" class="dashboard-section">
+            <div class="section-header-content">
+                <i class="fas fa-images section-icon"></i>
+                <p class="section-subheading">Tableau Dashboard Collection</p>
+                <h2 id="dynamic-date"></h2>
+            </div>
+            <div class="project-container"> 
+                <div class="project-card"><img src="dashboard/dashboard1.png" alt="Ground Command Center"><div class="card-content"><h3>Ground Command Center</h3><a href="#" class="btn-project-details open-image-modal" data-image="dashboard/dashboard1.png">View Details</a></div></div>
+                <div class="project-card"><img src="dashboard/dashboard2.png" alt="Morning Wave"><div class="card-content"><h3>Morning Wave</h3><a href="#" class="btn-project-details open-image-modal" data-image="dashboard/dashboard2.png">View Details</a></div></div>
+                <div class="project-card"><img src="dashboard/dashboard3.png" alt="NMC Daily OTP"><div class="card-content"><h3>NMC Daily OTP</h3><a href="#" class="btn-project-details open-image-modal" data-image="dashboard/dashboard3.png">View Details</a></div></div>
+            </div>
+        </section>
+
+        <section id="video-tutorial" class="dashboard-section">
+            <div class="section-header-content">
+                <i class="fas fa-video section-icon"></i>
+                <h2>Video </h2>
+            </div>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/-h_ibgZKimk?si=uVOIW2CJa0jUBXDr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </section>
+
+        <section id="partner-section" class="partner-section">
+    <div class="container">
+    <h2 class="section-title">Our Flight Partners</h2>
+    <div class="logo-container">
+
+        <div class="logo-item">
+        <img src="brand/airasia3.png" alt="Logo AirAsia Berhad">
+      </div>
+        <div class="logo-item">
+        <img src="brand/airasia1.png" alt="Logo AirAsia Group">
+      </div>
+      <div class="logo-item">
+        <img src="brand/airasia2.png" alt="Logo AirAsia X">
+      </div>
+      <div class="logo-item">
+        <img src="brand/etihad.png" alt="Etihad Airways">
+      </div>
+      <div class="logo-item">
+        <img src="brand/silkway.png" alt="Logo Silkway Airlines">
+      </div>
+      <div class="logo-item">
+        <img src="brand/yto.png" alt="Logo YTO Airlines">
+      </div>
+      <div class="logo-item">
+        <img src="brand/lanmei.jpg" alt="Logo Lanmei Airlines">
+      </div>
+      <div class="logo-item">
+        <img src="brand/Royalbrunei.jpg" alt="Logo Royal Brunei">
+      </div>
+      <div class="logo-item">
+        <img src="brand/IndiGo.png" alt="Logo IndiGo">
+      </div>
+      <div class="logo-item">
+        <img src="brand/himalaya.png" alt="Logo Himalaya Airlines">
+      </div>
+      <div class="logo-item">
+        <img src="brand/emirates2.png" alt="Logo Etihad">
+      </div>
+      <div class="logo-item">
+        <img src="brand/airnewzealand.jpg" alt="Logo Air New Zealand">
+      </div>
+      <div class="logo-item">
+        <img src="brand/lanmei.jpg" alt="Logo Lanmei Airlines">
+      </div>
+      
+    </div>
+    </div>
+    </section>
+
+
+    </main>
+
+    <footer class="main-footer">
+        <p>© <span id="current-year"></span> Ramp Data GTR. All Rights Reserved.</p>
+    </footer>
+
+    <div id="imageModal" class="modal">
+        <span class="close-modal-btn">×</span>
+        <img class="modal-content" id="modalImage" alt="Dashboard View">
+        <div class="caption-container">
+            <div id="modal-caption" class="modal-caption"></div>
+            <a id="downloadLink" class="btn-download" href="#" download>Download Image</a>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="script.js"></script>
+
+        <!-- ✅ Popup untuk memo/update -->
+        <div id="memoPopup" style="
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #d74f21;
+        color: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        max-width: 350px;
+        font-size: 13px;
+        z-index: 9999;
+        opacity: 0;
+        line-height: 1.5;
+        transition: opacity 0.5s ease;
+        ">
+        <strong>📢 Memo Terbaru</strong><br><br>
+        <div id="memoContent">Loading memo...</div>
+            <br>
+        <button onclick="closeMemo()" style="
+        background: white; color: #007bff; border: none;
+        padding: 6px 12px; border-radius: 5px; cursor: pointer;
+        ">Tutup</button>
+        </div>
+
+        <script>
+
+        // Toggle Mobile Menu
+        document.getElementById('hamburger-btn').addEventListener('click', function() {
+        document.getElementById('mobile-menu').classList.toggle('active');
+        });
+
+        // ✅ Tukar nilai ni bila ada memo/update baru
+        const CURRENT_MEMO_ID = "memo-2025-08-07";
+        const MEMO_TEXT = `
+        ✅ Update 15 Ogos 2025<br>
+        - E-Library akan ditambah<br>
+        - FAQ akan ditambah.<br>
+        - Dashboard baru di AVIATION OPERATION DASHBOARD.<br>
+        `;
+
+        // ✅ Paparkan memo jika belum dibaca
+        window.addEventListener("DOMContentLoaded", function () {
+        const hasSeen = localStorage.getItem("seenMemo");
+
+        if (hasSeen !== CURRENT_MEMO_ID) {
+        document.getElementById("memoContent").innerHTML = MEMO_TEXT;
+        const popup = document.getElementById("memoPopup");
+        popup.style.display = "block";
+        setTimeout(() => {
+        popup.style.opacity = 1;
+        }, 100);
+        }
+        });
+
+        // ✅ Tutup memo dan simpan sebagai sudah dibaca
+        function closeMemo() {
+        const popup = document.getElementById("memoPopup");
+        popup.style.opacity = 0;
+        setTimeout(() => {
+        popup.style.display = "none";
+        }, 500);
+        localStorage.setItem("seenMemo", CURRENT_MEMO_ID);
+        }
+
+        //function search bar
+        document.getElementById("searchInput").addEventListener("keyup", function () {
+        const filter = this.value.toLowerCase();
+        const listItems = document.querySelectorAll("#contentList li");
+
+        listItems.forEach(function (item) {
+      const text = item.textContent.toLowerCase();
+      if (text.includes(filter)) {
+        item.style.display = "";
+      } else {
+        item.style.display = "none";
+      }
+        });
+        });
+
+        </script>
+
+
+
+</body>
+</html>
